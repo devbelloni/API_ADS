@@ -26,7 +26,7 @@ async def create_todo(todo: TodoCreate):
     todos.append(new_todo)
     return new_todo
 
-@app.get("v1/todos", response_model=List[TodoResponse])
+@app.get("/v1/todos", response_model=List[TodoResponse])
 async def get_todos():
     return todos
 
